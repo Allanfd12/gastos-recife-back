@@ -7,63 +7,61 @@ import java.math.BigDecimal;
 
 public class DespesasDto {
 
-    @NotBlank
     private int anoMovimentacao;
-    @NotBlank
     private int mesMovimentacao;
     @NotBlank
     @Size(max = 3)
     private String orgaoCodigo;
     @NotBlank
-    @Size(max = 100)
+    @Size(max = 150)
     private String orgaoNome;
     @NotBlank
     @Size(max = 6)
     private String unidadeCodigo;
     @NotBlank
-    @Size(max = 100)
+    @Size(max = 150)
     private String unidadeNome;
     @NotBlank
     @Size(max = 2)
     private String categoriaEconomicaCodigo;
     @NotBlank
-    @Size(max = 100)
+    @Size(max = 150)
     private String categoriaEconomicaNome;
     @NotBlank
     @Size(max = 2)
     private String grupoDespesaCodigo;
     @NotBlank
-    @Size(max = 100)
+    @Size(max = 150)
     private String grupoDespesaNome;
     @NotBlank
     @Size(max = 2)
     private String modalidadeAplicacaoCodigo;
     @NotBlank
-    @Size(max = 100)
+    @Size(max = 150)
     private String modalidadeAplicacaoNome;
     @NotBlank
     @Size(max = 2)
     private String elementoCodigo;
     @NotBlank
-    @Size(max = 100)
+    @Size(max = 150)
     private String elementoNome;
     @NotBlank
     @Size(max = 2)
     private String subelementoCodigo;
     @NotBlank
-    @Size(max = 100)
+    @Size(max = 150)
     private String subelementoNome;
     @NotBlank
     @Size(max = 2)
     private String funcaoCodigo;
     @NotBlank
-    @Size(max = 100)
+    @Size(max = 150)
     private String funcaoNome;
     @NotBlank
     @Size(max = 4)
     private String subfuncaoCodigo;
     @NotBlank
-    @Size(max = 100)
+    @Size(max = 150)
     private String subfuncaoNome;
     @NotBlank
     @Size(max = 4)
@@ -81,12 +79,12 @@ public class DespesasDto {
     @Size(max = 4)
     private String fonteRecursoCodigo;
     @NotBlank
-    @Size(max = 100)
+    @Size(max = 150)
     private String fonteRecursoNome;
-    @NotBlank
+
     private int empenhoAno;
     @NotBlank
-    @Size(max = 100)
+    @Size(max = 150)
     private String empenhoModalidadeNome;
     @NotBlank
     @Size(max = 4)
@@ -110,13 +108,13 @@ public class DespesasDto {
     @Size(max = 4)
     private String modalidadeLicitacaoCodigo;
     @NotBlank
-    @Size(max = 100)
+    @Size(max = 150)
     private String modalidadeLicitacaoNome;
-    @NotBlank
+
     private BigDecimal valorEmpenhado;
-    @NotBlank
+
     private BigDecimal valorLiquidado;
-    @NotBlank
+
     private BigDecimal valorPago;
 
     public int getAnoMovimentacao() {
