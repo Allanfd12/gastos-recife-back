@@ -1,109 +1,123 @@
-package com.api.nyx.gastosrecife.models;
+package com.api.nyx.gastosrecife.dtos;
 
-import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
-import java.io.Serial;
-import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.UUID;
 
-@Entity
-@Table(name = "DESPESAS")
-public class DespesasModel implements Serializable {
-    @Serial
-    private static final long serialVersionUID = 1L;
+public class DespesasDto {
 
-    @Id
-
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
-
-    @Column(name = "ano_movimentacao", nullable = false, length = 4)
+    @NotBlank
     private int anoMovimentacao;
-    @Column(name = "mes_movimentacao", nullable = false, length = 2)
+    @NotBlank
     private int mesMovimentacao;
-    @Column(name = "orgao_codigo", nullable = false, length = 3)
+    @NotBlank
+    @Size(max = 3)
     private String orgaoCodigo;
-    @Column(name = "orgao_nome", nullable = false, length = 100)
+    @NotBlank
+    @Size(max = 100)
     private String orgaoNome;
-    @Column(name = "unidade_codigo", nullable = false, length = 6)
+    @NotBlank
+    @Size(max = 6)
     private String unidadeCodigo;
-    @Column(name = "unidade_nome", nullable = false, length = 100)
+    @NotBlank
+    @Size(max = 100)
     private String unidadeNome;
-    @Column(name = "categoria_economica_codigo", nullable = false, length = 2)
+    @NotBlank
+    @Size(max = 2)
     private String categoriaEconomicaCodigo;
-    @Column(name = "categoria_economica_nome", nullable = false, length = 100)
+    @NotBlank
+    @Size(max = 100)
     private String categoriaEconomicaNome;
-    @Column(name = "grupo_despesa_codigo", nullable = false, length = 2)
+    @NotBlank
+    @Size(max = 2)
     private String grupoDespesaCodigo;
-    @Column(name = "grupo_despesa_nome", nullable = false, length = 100)
+    @NotBlank
+    @Size(max = 100)
     private String grupoDespesaNome;
-    @Column(name = "modalidade_aplicacao_codigo", nullable = false, length = 2)
+    @NotBlank
+    @Size(max = 2)
     private String modalidadeAplicacaoCodigo;
-    @Column(name = "modalidade_aplicacao_nome", nullable = false, length = 100)
+    @NotBlank
+    @Size(max = 100)
     private String modalidadeAplicacaoNome;
-    @Column(name = "elemento_codigo", nullable = false, length = 2)
+    @NotBlank
+    @Size(max = 2)
     private String elementoCodigo;
-    @Column(name = "elemento_nome", nullable = false, length = 100)
+    @NotBlank
+    @Size(max = 100)
     private String elementoNome;
-    @Column(name = "subelemento_codigo", nullable = false, length = 2)
+    @NotBlank
+    @Size(max = 2)
     private String subelementoCodigo;
-    @Column(name = "subelemento_nome", nullable = false, length = 100)
+    @NotBlank
+    @Size(max = 100)
     private String subelementoNome;
-    @Column(name = "funcao_codigo", nullable = false, length = 2)
+    @NotBlank
+    @Size(max = 2)
     private String funcaoCodigo;
-    @Column(name = "funcao_nome", nullable = false, length = 100)
+    @NotBlank
+    @Size(max = 100)
     private String funcaoNome;
-    @Column(name = "subfuncao_codigo", nullable = false, length = 4)
+    @NotBlank
+    @Size(max = 4)
     private String subfuncaoCodigo;
-    @Column(name = "subfuncao_nome", nullable = false, length = 100)
+    @NotBlank
+    @Size(max = 100)
     private String subfuncaoNome;
-    @Column(name = "programa_codigo", nullable = false, length = 4)
+    @NotBlank
+    @Size(max = 4)
     private String programaCodigo;
-    @Column(name = "programa_nome", nullable = false, length = 150)
+    @NotBlank
+    @Size(max = 150)
     private String programaNome;
-    @Column(name = "acao_codigo", nullable = false, length = 4)
+    @NotBlank
+    @Size(max = 4)
     private String acaoCodigo;
-    @Column(name = "acao_nome", nullable = false, length = 150)
+    @NotBlank
+    @Size(max = 150)
     private String acaoNome;
-    @Column(name = "fonte_recurso_codigo", nullable = false, length = 4)
+    @NotBlank
+    @Size(max = 4)
     private String fonteRecursoCodigo;
-    @Column(name = "fonte_recurso_nome", nullable = false, length = 100)
+    @NotBlank
+    @Size(max = 100)
     private String fonteRecursoNome;
-    @Column(name = "empenho_ano", nullable = false, length = 4)
+    @NotBlank
     private int empenhoAno;
-    @Column(name = "empenho_modalidade_nome", nullable = false, length = 100)
+    @NotBlank
+    @Size(max = 100)
     private String empenhoModalidadeNome;
-    @Column(name = "empenho_modalidade_codigo", nullable = false, length = 4)
+    @NotBlank
+    @Size(max = 4)
     private String empenhoModalidadeCodigo;
-    @Column(name = "empenho_numero", nullable = false, length = 6)
+    @NotBlank
+    @Size(max = 6)
     private String empenhoNumero;
-    @Column(name = "subempenho", nullable = false, length = 6)
+    @NotBlank
+    @Size(max = 6)
     private String subempenho;
-    @Column(name = "indicador_subempenho", nullable = false, length = 1)
+    @NotBlank
+    @Size(max = 1)
     private String indicadorSubempenho;
-    @Column(name = "credor_codigo", nullable = false, length = 8)
+    @NotBlank
+    @Size(max = 8)
     private String credorCodigo;
-    @Column(name = "credor_nome", nullable = false, length = 150)
+    @NotBlank
+    @Size(max =  150)
     private String credorNome;
-    @Column(name = "modalidade_licitacao_codigo", nullable = false, length = 4)
+    @NotBlank
+    @Size(max = 4)
     private String modalidadeLicitacaoCodigo;
-    @Column(name = "modalidade_licitacao_nome", nullable = false, length = 100)
+    @NotBlank
+    @Size(max = 100)
     private String modalidadeLicitacaoNome;
-    @Column(name = "valor_empenhado", nullable = false, length = 20)
+    @NotBlank
     private BigDecimal valorEmpenhado;
-    @Column(name = "valor_liquidado", nullable = false, length = 20)
+    @NotBlank
     private BigDecimal valorLiquidado;
-    @Column(name = "valor_pago", nullable = false, length = 20)
+    @NotBlank
     private BigDecimal valorPago;
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
 
     public int getAnoMovimentacao() {
         return anoMovimentacao;
