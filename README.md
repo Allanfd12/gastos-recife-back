@@ -33,6 +33,8 @@ a porta padrão de conexão do PostgreSql é a **5432** e deverá ser configurad
 
 Uma vez definida as dependencias, o projeto poderá ser iniciado utilizando seu IDE favorito, ou rodando o comando `./mvnw spring-boot:run` na raiz do projeto.
 
+Os testes podem ser executados usando o comando `./mvnw test`
+
 Por padrão, será criado um ponto de acesso em http://localhost:8080/.
 
 ## Rotas Disponiveis
