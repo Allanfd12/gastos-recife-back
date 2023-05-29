@@ -14,4 +14,27 @@ datasource http://dados.recife.pe.gov.br/dataset/despesas-orcamentarias/resource
     - Unificar as três visualizações em uma única tela (SPA - Single Page Application)
 
 ## Inicializando o Projeto
+Este projeto foi feito utilizando o Spriong Boot 3.1, Java 17 e PostgreSql
+
+### configurando o Ambiente
+
+ - Será necessario instalar as dependencias Java e Spring: [como iniciar com o Spring](https://spring.io/quickstart).
+ - Será necessario instalar o PostgreSql: [Download Postgres](https://www.postgresql.org/download/).
+ - Será necessário criar uma nova database vazia no banco de dados, por exemplo, de nome `spring-recife`
+ - Opcionalmente, você poderá utilizar o [Gastos recife Front-end](https://github.com/Allanfd12/gastos-recife-front) para facilitar a visualziação.
+
+### configurando o Projeto
+
+Após configurar corretamente as dependencias, será necessário ir no arquivo `src/main/resources/application.properties` e definir os dados de conexão com o banco.
+
+**Atenção**
+`spring.datasource.url= jdbc:postgresql://localhost:15432/spring-recife` representa url de conexão com o banco de dados, certifique-se de que a porta e o nome da database estão corretos.
+a porta padrão de conexão do PostgreSql é a **5432** e deverá ser configurada, caso siga com uma instalação normal do postgre.
+
+Uma vez definida as dependencias, o projeto poderá ser iniciado utilizando seu IDE favorito, ou rodando o comando `./mvnw spring-boot:run` na raiz do projeto.
+
+Por padrão, será criado um ponto de acesso em http://localhost:8080/.
+
+
+
 
