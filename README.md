@@ -35,6 +35,15 @@ Uma vez definida as dependencias, o projeto poderá ser iniciado utilizando seu 
 
 Por padrão, será criado um ponto de acesso em http://localhost:8080/.
 
+## Rotas Disponiveis
+
+EndPoint | Função |  Metodo |
+:--------- | :------ | :------ |
+ /despesas| Permite o cadastro de um novo registro de despesa | POST |
+ /despesas/{ano}/total| Retorna o total de despesas de um ano | GET |
+ /despesas/{ano}/categoria| Retorna o total de despesas de um ano agrupado por categoria | GET |
+ /despesas/{ano}/mes| Retorna o total de despesas de um ano agrupado por mês | GET |
+ /despesas/{ano}/fonte| Retorna o total de despesas de um ano agrupado por fonte de recurso | GET |
 
 
 
