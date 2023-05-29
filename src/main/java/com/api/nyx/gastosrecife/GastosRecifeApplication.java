@@ -13,10 +13,5 @@ public class GastosRecifeApplication {
 		SpringApplication.run(GastosRecifeApplication.class, args);
 	}
 
-	@GetMapping("/")
-	public String index() {
-		return "Hello World";
-	}
-
 
 }

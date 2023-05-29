@@ -1,14 +1,22 @@
 package com.api.nyx.gastosrecife.dtos;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 import java.math.BigDecimal;
 
 public class TotalDespesasByFonteDto {
-    private int ano;
-    private BigDecimal empenho;
-    private BigDecimal liquidacao;
-    private BigDecimal pagamento;
 
+    @Schema(description = "Ano da despesa", example = "2017")
+    private int ano;
+    @Schema(description = "Total de empenho", example = "1893349432.43")
+    private BigDecimal empenho;
+    @Schema(description = "Total de liquidação", example = "1872677085.46")
+    private BigDecimal liquidacao;
+    @Schema(description = "Total de pagamento", example = "1895206352.25")
+    private BigDecimal pagamento;
+    @Schema(description = "Código da fonte", example = "100")
     private String fonteCodigo;
+    @Schema(description = "Nome da fonte", example = "RECURSOS ORDINÁRIOS - NÃO VINCULADOS")
     private String fonteNome;
 
     public int getAno() {
