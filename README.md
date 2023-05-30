@@ -20,6 +20,7 @@ Este projeto foi feito utilizando o Spriong Boot 3.1, Java 17 e PostgreSql
 
  - Será necessario instalar as dependencias Java e Spring: [como iniciar com o Spring](https://spring.io/quickstart).
  - Será necessario instalar o PostgreSql: [Download Postgres](https://www.postgresql.org/download/).
+   - Alternativamente, você pode mudar para a branch feature/h2-database e ignorar as configurações de database, [ir para banch H2](https://github.com/Allanfd12/gastos-recife-back/tree/feature/h2-database#readme).
  - Será necessário criar uma nova database vazia no banco de dados, por exemplo, de nome `spring-recife`
  - Opcionalmente, você poderá utilizar o [Gastos recife Front-end](https://github.com/Allanfd12/gastos-recife-front) para facilitar a visualziação.
 
